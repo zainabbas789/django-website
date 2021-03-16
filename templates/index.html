@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Welcome To TextUtils</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b>WELCOME TO TEXTUTILS</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/AboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+
+      </ul>
+    </div>
+  </div>
+      <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</nav>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>WELCOME TO TEXTUTILS!</strong> You can do anything with text here.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+  <div class="container">
+    #CSRF is for verification
+   <form action="/analyze", method="POST" >{% csrf_token %}
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Enter your text here!!</label>
+  <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+</div>
+
+      <div class="form-check form-switch">
+  <input class="form-check-input" name="removepunc" type="checkbox" id="customSwitch1">
+  <label class="form-check-label" for="customSwitch1">Remove punctuations</label>
+</div>
+      <div class="form-check form-switch">
+  <input class="form-check-input" name="Fullcaps" type="checkbox" id="customSwitch2">
+  <label class="form-check-label" for="customSwitch2">Upper case</label>
+</div>
+      <div class="form-check form-switch">
+  <input class="form-check-input" name="Newlineremover" type="checkbox" id="customSwitch3">
+  <label class="form-check-label" for="customSwitch3">Newline remover</label>
+</div>
+      <div class="form-check form-switch">
+  <input class="form-check-input" name="spaceremover" type="checkbox" id="customSwitch4">
+  <label class="form-check-label" for="customSwitch4">Extra space remover</label>
+</div>
+      <div class="form-check form-switch">
+  <input class="form-check-input" name="charcount" type="checkbox" id="customSwitch5">
+  <label class="form-check-label" for="customSwitch5">Number of characters</label>
+</div>
+      <button type="submit" class="btn btn-dark mt-2">Analyze Text</button>
+   </form>
+  </div>
+  </body>
+</html>

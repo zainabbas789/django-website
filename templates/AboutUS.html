@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Welcome To TextUtils</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b>WELCOME TO TEXTUTILS</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+
+      </ul>
+    </div>
+  </div>
+      <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</nav>
+  </div>
+  <div>
+      <h1 align="center">About TextUtils</h1>
+      They are the good, the bad and the ugly. The normal String is good, the blank is bit bad, but null is ugly. And one of the very basic method of TextUtils saves us not only from ugly, but also from the bad. Calling TextUtils.isEmpty() with a String will return true if String is null or empty (""). Just filter all your string related calls with TextUtils.isEmpty() is false or not and you will never face any crash related to Strings1
+
+Have I told you that this method and many of the methods from TextUtils is not limited to only Strings? It originally accepts CharSequence, which is not only the super class of String but almost all the classes that are used to make or print a Text. Just take a look at the classes inherited by CharSequence (Just expand Known Indirect Subclass).
+
+However there is something to be noted. While dealing with many webservices I have encountered some will send "null"(=null-as-a-value) instead of sending "" or null. This string will pass from TextUtils.isEmpty test because it’s neither null nor blank. It will be super embarrassing when this value is supposed to be shown in UI, and As a workaround I have written this simple method.
+  </div>
+    </body>
+</html>
